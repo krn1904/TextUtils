@@ -16,6 +16,13 @@ export default function About(props) {
     border: props.mode === 'dark' ? '1px solid #6c757d' : '1px solid #dee2e6'
   };
 
+  const buttonStyle = {
+    color: props.mode === 'dark' ? 'white' : '#042743',
+    backgroundColor: props.mode === 'dark' ? '#042743' : 'white',
+    borderColor: props.mode === 'dark' ? '#6c757d' : '#dee2e6',
+    boxShadow: 'none'
+  };
+
   return (
     <div className="container my-5" style={containerStyle}>
       <h1 className="mb-4">About TextUtils</h1>
@@ -23,7 +30,7 @@ export default function About(props) {
         TextUtils is a simple yet powerful text manipulation utility designed to help you analyze and transform your text with ease.
       </p>
       
-      <div className="accordion" id="accordionAbout">
+      <div className="accordion" id="accordionAbout" style={accordionStyle}>
         {/* About TextUtils Section */}
         <div className="accordion-item" style={accordionStyle}>
           <h2 className="accordion-header" id="headingOne" style={accordionStyle}>
@@ -34,7 +41,7 @@ export default function About(props) {
               data-bs-target="#collapseOne" 
               aria-expanded="true" 
               aria-controls="collapseOne" 
-              style={accordionStyle}
+              style={buttonStyle}
             >
               <strong>📖 What is TextUtils?</strong>
             </button>
@@ -69,7 +76,7 @@ export default function About(props) {
               data-bs-target="#collapseTwo" 
               aria-expanded="false" 
               aria-controls="collapseTwo" 
-              style={accordionStyle}
+              style={buttonStyle}
             >
               <strong>✨ Features</strong>
             </button>
@@ -116,7 +123,7 @@ export default function About(props) {
               data-bs-target="#collapseThree" 
               aria-expanded="false" 
               aria-controls="collapseThree" 
-              style={accordionStyle}
+              style={buttonStyle}
             >
               <strong>🛠️ Technologies Used</strong>
             </button>
@@ -154,7 +161,7 @@ export default function About(props) {
               data-bs-target="#collapseFour" 
               aria-expanded="false" 
               aria-controls="collapseFour" 
-              style={accordionStyle}
+              style={buttonStyle}
             >
               <strong>👨‍💻 Developer Information</strong>
             </button>
