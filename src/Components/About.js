@@ -26,7 +26,7 @@ export default function About(props) {
       <div className="accordion" id="accordionAbout">
         {/* About TextUtils Section */}
         <div className="accordion-item" style={accordionStyle}>
-          <h2 className="accordion-header" id="headingOne">
+          <h2 className="accordion-header" id="headingOne" style={accordionStyle}>
             <button 
               className="accordion-button" 
               type="button" 
@@ -44,6 +44,7 @@ export default function About(props) {
             className="accordion-collapse collapse show" 
             aria-labelledby="headingOne" 
             data-bs-parent="#accordionAbout"
+            style={accordionStyle}
           >
             <div className="accordion-body" style={accordionStyle}>
               <p>
@@ -60,7 +61,7 @@ export default function About(props) {
 
         {/* Features Section */}
         <div className="accordion-item" style={accordionStyle}>
-          <h2 className="accordion-header" id="headingTwo">
+          <h2 className="accordion-header" id="headingTwo" style={accordionStyle}>
             <button 
               className="accordion-button collapsed" 
               type="button" 
@@ -78,6 +79,7 @@ export default function About(props) {
             className="accordion-collapse collapse" 
             aria-labelledby="headingTwo" 
             data-bs-parent="#accordionAbout"
+            style={accordionStyle}
           >
             <div className="accordion-body" style={accordionStyle}>
               <ul className="list-unstyled">
@@ -106,7 +108,7 @@ export default function About(props) {
 
         {/* Technologies Section */}
         <div className="accordion-item" style={accordionStyle}>
-          <h2 className="accordion-header" id="headingThree">
+          <h2 className="accordion-header" id="headingThree" style={accordionStyle}>
             <button 
               className="accordion-button collapsed" 
               type="button" 
@@ -124,6 +126,7 @@ export default function About(props) {
             className="accordion-collapse collapse" 
             aria-labelledby="headingThree" 
             data-bs-parent="#accordionAbout"
+            style={accordionStyle}
           >
             <div className="accordion-body" style={accordionStyle}>
               <p>TextUtils is built with modern web technologies to ensure a fast, responsive, and reliable experience:</p>
@@ -143,7 +146,7 @@ export default function About(props) {
 
         {/* Developer Info Section - Placeholder for user's info */}
         <div className="accordion-item" style={accordionStyle}>
-          <h2 className="accordion-header" id="headingFour">
+          <h2 className="accordion-header" id="headingFour" style={accordionStyle}>
             <button 
               className="accordion-button collapsed" 
               type="button" 
@@ -161,6 +164,7 @@ export default function About(props) {
             className="accordion-collapse collapse" 
             aria-labelledby="headingFour" 
             data-bs-parent="#accordionAbout"
+            style={accordionStyle}
           >
             <div className="accordion-body" style={accordionStyle}>
               <p>
