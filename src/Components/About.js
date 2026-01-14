@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default function About(props) {
+  // Get developer info from environment variables
+  const githubUsername = process.env.REACT_APP_GITHUB_USERNAME || 'krn1904';
+  const githubRepoUrl = process.env.REACT_APP_GITHUB_REPO_URL || 'https://github.com/krn1904/TextUtils';
+
   const containerStyle = {
     color: props.mode === 'dark' ? 'white' : '#042743',
     backgroundColor: props.mode === 'dark' ? '#042743' : 'white'
@@ -160,10 +164,28 @@ export default function About(props) {
           >
             <div className="accordion-body" style={accordionStyle}>
               <p>
-                TextUtils is developed and maintained by <strong>krn1904</strong>.
+                TextUtils is developed and maintained by{' '}
+                <strong>
+                  <a 
+                    href={`https://github.com/${githubUsername}`}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: props.mode === 'dark' ? '#4da3ff' : '#0d6efd' }}
+                  >
+                    {githubUsername}
+                  </a>
+                </strong>.
               </p>
               <p className="mb-0">
-                <em>Additional developer information will be added here.</em>
+                <strong>🔗 Project Repository:</strong>{' '}
+                <a 
+                  href={githubRepoUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ color: props.mode === 'dark' ? '#4da3ff' : '#0d6efd' }}
+                >
+                  {githubRepoUrl}
+                </a>
               </p>
             </div>
           </div>
